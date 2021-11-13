@@ -1,14 +1,15 @@
 package com.mota.felipe;
 
 import com.mota.felipe.service.AppService;
+import com.mota.felipe.service.interfaces.MatrixInterface;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class AppTest
 {
     @Test
-    public void shouldFindTheLongestSequenceOfValuesSorted(){
-        AppService service = new AppService();
+    public void shouldFindTheLongestSequenceOfValuesSorted_C3xR3_Matrix(){
+        MatrixInterface service = new AppService();
         String longest = service.findLongest(new int[][] {
           {5, 8, 7},
           {6, 9, 1},
@@ -18,8 +19,8 @@ public class AppTest
     }
 
     @Test
-    public void shouldFindTheLongestSequenceOfValuesSorted_3(){
-        AppService service = new AppService();
+    public void shouldFindTheLongestSequenceOfValuesSorted__C2xR2_Matrix(){
+        MatrixInterface service = new AppService();
         String longest = service.findLongest(new int[][] {
           {5, 8},
           {6, 9}
@@ -28,8 +29,8 @@ public class AppTest
     }
 
     @Test
-    public void shouldFindTheLongestSequenceOfValuesSorted_2(){
-        AppService service = new AppService();
+    public void shouldFindTheLongestSequenceOfValuesSorted_C5xR5_Matrix(){
+        MatrixInterface service = new AppService();
         String longest = service.findLongest(new int[][] {
           { 10, 13, 14, 21, 23 },
           { 11, 10, 22, 2, 3 },
@@ -41,8 +42,8 @@ public class AppTest
     }
 
     @Test
-    public void shouldFindTheLongestSequenceOfValuesSorted_4(){
-        AppService service = new AppService();
+    public void shouldFindTheLongestSequenceOfValuesSorted_C3xR4_Matrix(){
+        MatrixInterface service = new AppService();
         String longest = service.findLongest(new int[][] {
           {   9,   8,   7,  6  },
           {  21,  60,  12,  5  },
