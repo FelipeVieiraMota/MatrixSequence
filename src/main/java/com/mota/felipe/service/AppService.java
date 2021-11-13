@@ -1,15 +1,11 @@
 package com.mota.felipe.service;
 
 import com.mota.felipe.service.interfaces.MatrixInterface;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.util.HashMap;
 import java.util.Map;
 
 @NoArgsConstructor
-@Getter @Setter
 public class AppService implements MatrixInterface {
 
   private String find;
