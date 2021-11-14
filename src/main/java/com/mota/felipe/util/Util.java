@@ -6,6 +6,32 @@ import java.util.Arrays;
 
 public class Util {
 
+  public static void showMatrix(int[][] matrix, int maxRow, int maxColumn){
+    System.out.println("");
+    System.out.println("");
+    System.out.println(" "+maxRow +" "+maxColumn);
+
+    var lineBreaker = 0;
+
+    for (int row = 0; row<= maxRow-1; row++)
+    {
+      for (int column = 0; column<= maxColumn-1; column++)
+      {
+        if (lineBreaker > maxColumn-1) lineBreaker = 0;
+
+        if ( lineBreaker < maxColumn-1 )
+        {
+          System.out.print(" " + matrix [row][column]);
+        }
+        else
+        {
+          System.out.println(" " + matrix [row][column]);
+        }
+        lineBreaker++;
+      }
+    }
+  }
+
   public static Matrix stringListToMatrixObject(String []  args) throws Exception{
 
     if (args.length == 0){
@@ -46,6 +72,10 @@ public class Util {
 
     var matrix = new int [maxRow][maxColumn];
 
+    System.out.println("");
+    System.out.println("");
+    System.out.println(" "+maxRow +" "+maxColumn);
+
     for (int row = 0; row<= maxRow-1; row++)
     {
       for (int column = 0; column<= maxColumn-1; column++)
@@ -60,12 +90,13 @@ public class Util {
         else
         {
           matrix [row][column] = cleanList[counter];
-          System.out.println(matrix [row][column]);
+          System.out.println(" " + matrix [row][column]);
         }
         counter++;
         lineBreaker++;
       }
     }
+
     return new Matrix(maxRow, maxColumn, matrix);
   }
 }
